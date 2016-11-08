@@ -382,7 +382,7 @@
                             <u><h2>The Communication Protocol Analysis of HTC Vive Wireless Controllers</h2></u>
                             <br>
                             <p align="left">
-                                <Strong>Abstract: </Strong> As an engineer who works in a VR startup company, it's pretty easy for me to get and test many different kinds of VR products. HTC Vive is one of the most popular VR products in the world. The whole system includes a headset, a pair of wireless controllers, a pair of lighthouses and a linkbox. I tried to do some research to understand how the whole system works, especially the communication protocol part.
+                                <Strong>Abstract: </Strong> As an engineer who works in a VR startup company, it's pretty easy for me to get and test many different kinds of VR products. HTC Vive is one of the most popular VR products in the world. The whole system includes a headset, a pair of wireless controllers, a pair of lighthouses and a linkbox. I tried to do some research to understand how the whole system works, especially the communication protocol part. All of the research were did during my after hours.
                                 <br>
                                 <br>
                                 <img src="img/portfolio/htcVive.jpg" class="img-responsive" alt="">
@@ -398,13 +398,22 @@
                                 First of all, I used the mobile App "Lightblue explorer" to detect the bluetooth devices and the App only detect the lighthouses Bluetooth signal(2402 - 2480 MHz, 40 channels, 2 MHz per channel, GFSK). However, we couldn't find any Bluetooth connection between the lighthouses with Vive or PC. Then, we supposed that the pair of lighthouses make the connection by Bluetooth.
                                 <br>
                                 <br>
-                                Secondly, In Setting of SteamVR, there is a function called "Enable Bluetooth communication". According to the description, base stations can be wirelessly power managed and updated. Once I clicked the button, the Lightblue explorer detected the bluetooth(bluetooth 4.1, 2402 - 2480 MHz, 79 channels, 1 or 2 MHz per channel, GFSK + PI/4DQPSK + 8DPSK) from linkbox. It made me feel confused that why the Vive developers designed the linkbox. I tried to connect the headset to the PC without linkbox, but the SteamVR couldn't drive the headset. As a result, I confirmed that there is a driver in the linkbox and I suspected that the bluetooth in linkbox would be improved in the future version of Vive, to make Vive connects with mobile phone (The main product of HTC is their mobile phone).
+                                Secondly, based on the knowledge of Bluetooth, I known that it works in 2.4GHz with many channels. With the adaptive frequency hopping design, the security level of Bluetooth is high. Nevertheless, the transmission of Bluetooth is not rigid. It sends the data in different channels and different trasmission speed. With that, the Bluetooth receiver spends few seconds to decode the data. Yet, the position information of controllers should be transmitted as soon as possible. The basic fps requirement of Vive is 60, which means that the controller should send at least 60 real-time position data in a second. Bluetooth doesn't satify this requirement. Besides, the security issue of Vive controllers is not critical. It's necessary to encrypt the data of controller's position.   
+                                <br>
+                                <br>
+                                With the evidences presented above, we may safely arrive at the conclusion that the protocol of HTC Vive controllers is not Bluetooth. Here, I assumed that HTC made their own protocol. I read the report on Federal Communications Commission(FCC), it shows that the trammision of controller is in 2.4 GHz with 79 channels(2402 - 2480 MHz, 1 MHz per channel, FSK). Becuase of the confidentiality agreement, we couldn't get more information.
+                                <br>
+                                <br>
+                                Apart from the protocol of controllers, I also figured out some special things. In Setting of SteamVR, there is a function called "Enable Bluetooth communication". According to the description, base stations can be wirelessly power managed and updated. Once I clicked the button, the Lightblue explorer detected the bluetooth(bluetooth 4.1, 2402 - 2480 MHz, 79 channels, 1 or 2 MHz per channel, GFSK + PI/4DQPSK + 8DPSK) from linkbox. It made me feel confused that why the Vive developers designed the linkbox. I tried to connect the headset to the PC without linkbox, but the SteamVR couldn't drive the headset. As a result, I confirmed that there is a driver in the linkbox and I suspected that the bluetooth in linkbox would be improved in the future version of Vive, to make Vive connects with mobile phone (The main product of HTC is their mobile phone).
                                 <br>
                                 <br>
                                 <Strong>Experiments: </Strong> ABC
                                 <br>
                                 <br>
                                 <Strong>Bluetooth Update: </Strong> ABC
+                                <br>
+                                <br>
+                                <Strong>About the Lighthouse: </Strong> ABC
                                 <br>
                                 <br>
                                 <Strong>The Communication Protocol of Controllers: </Strong> ABC
