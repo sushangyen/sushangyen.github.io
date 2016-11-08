@@ -386,14 +386,17 @@
                                 <br>
                                 <br>
                                 <img src="img/portfolio/htcVive.jpg" class="img-responsive" alt="">
-                                <br>
-                                <Strong>About HTC Vive: </Strong> The whole system can be seperated into different parts. The headset(N) should be connect with PC through the linkbox(E) with HDMI line and USB line. The pair of controllers(O) is wireless. Once the system be set up, we can connect the the controllers with Vive. Furthermore, the position information of controllers are related to the pair of lighthouses(A). Yet, the lighthouses are independant and don't connect with Vive or PC.
+                                <Strong>About HTC Vive: </Strong> The whole system can be seperated into different parts. The headset(N) should be connect with PC through the linkbox(E) with HDMI line and USB line. The pair of controllers(O) is wireless. Once the system be set up, we can connect the the controllers with Vive. Furthermore, the position information of controllers are related to the pair of lighthouses(A). Yet, the lighthouses are independant and don't connect with Vive or PC. Besides, the whole system can be drive on SteamVR.
                                 <br>
                                 <br>
                                 <Strong>Motivation: </Strong> When my colleagues and I were developing a VR game with HTC Vive, we set up three sets of Vive. Intuitively, for three sets of Vive, six lighthouses are required for three headsets. However, there are so many interferences for the controllers after we set up six lighthouse in our office. When three pairs of controllers were working together, the position couldn't be detected accurately. After searching the solution on Internet, we figured out that we only need to equip one pair of lighthouses. And it worked! However, it also inspired our curiosities for understanding how the whole Vive system works. 
                                 <br>
                                 <br>
-                                <Strong>Background: </Strong> ABC
+                                <Strong>Background: </Strong>  To talk about the most common protocol for short distance communication, Bluetooth is undoubtly the best option. Therefore, I supposed that the controllers connect with PC by Bluretooth. However, several of evidences shown that our hypothesis was incorrect. 
+                                <br>
+                                First of all, I used the mobile App "Lightblue explorer" to detect the bluetooth devices and the App only detect the lighthouses Bluetooth signal(2402 - 2480 MHz, 40 channels, 2 MHz per channel, GFSK). However, we couldn't find any Bluetooth connection between the lighthouses with Vive or PC. Then, we supposed that the pair of lighthouses make the connection by Bluetooth.
+                                <br>
+                                In Setting of SteamVR, there is a function called "Enable Bluetooth communication". According to the description, base stations can be wirelessly power managed and updated. Once I clicked the button, the Lightblue explorer detected the bluetooth(bluetooth 4.1, 2402 - 2480 MHz, 79 channels, 1 or 2 MHz per channel, GFSK + PI/4DQPSK + 8DPSK) from linkbox. It made me feel confused that why the Vive developers designed the linkbox. And I suspected that the bluetooth in linkbox would be improved in the future version of Vive, to make Vive connects with mobile phone (The main product of HTC is their mobile phone).
                                 <br>
                                 <br>
                                 <Strong>Experiments: </Strong> ABC
