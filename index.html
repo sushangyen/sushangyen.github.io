@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Su, Shang-Yen (Louis)</title>
+    <title>Su, Shang-Yen (蘇上硯)</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -399,20 +399,20 @@
                             <u><h2>Gold Price (XAUUSD) Analyzer</h2></u>
                             <br>
                             <p align="left">
-                                        <Strong>Introduction: </Strong>This XAUUSD analyzer can read the real-time gold price (XAUUSD) from the Internet and do some analysis with a algorithm learned from one of my friend for predicting the best ask/bid moment. Once the program figures out any proper moment to do the XAUUSD transaction, it will notice user by Email. The whole project includes four parts: (1) Real-time gold price reader, (2) Gold price chart generator, (3) Ask/bid moment analyzer, (4) Email Noticer. Here, I gonna introduce my developed process and the problems I met in the following paragraphs. 
+                                        <Strong>Introduction: </Strong>This XAUUSD analyzer can read the real-time gold price (XAUUSD) from the Internet and do some analysis with an algorithm learned from one of my friends for predicting the best ask/bid moment. Once the program figures out any proper moment to do the XAUUSD transaction, it will notice user by Email. The whole project includes four parts: (1) Real-time gold price reader, (2) Gold price chart generator, (3) Ask/bid moment analyzer, (4) Email Noticer. Here, I gonna introduce my developed process and the problems I met in the following paragraphs. 
                                         <br>
                                         <br>
-                                        <Strong>1) Real-time Gold Price Reader: </Strong> At first, I didn't consider this part with Python as a big deal until figured out that the real-time stock price couldn't get easily without Yahoo Finance API. However, I didn't intend to buy that API as a individual developer who was doing some non-profit research. Maybe the Python library, "Beautiful Soap", is a good solution of getting the price data from the html. Yet, I was not familiar with that library so that I decided to read the price info with my professional tools: image recognition. It sounded like a unwise choice because of the low efficiency of processing those "images". Well...I decided to follow my insane mind before learning more knowledge of Beautiful Soap.
+                                        <Strong>1) Real-time Gold Price Reader: </Strong> At first, I didn't consider this part with Python as a big deal until figured out that the real-time stock price couldn't get easily without Yahoo Finance API. However, I didn't intend to buy that API as an individual developer who was doing some non-profit research. Maybe the Python library, "Beautiful Soap", is a good solution to get the price data from the HTML. Yet, I was not familiar with that library and the related knowledge of crawling so that I decided to read the price info with my professional skill: image recognition. It sounded like an unwise choice because of the low efficiency of processing those "images". Well...I decided to follow my insane mind before learning more knowledge of Beautiful Soap Library.
                                         <br>
                                         <br>
-                                        The program starts from screenshot. The program screenshots the Web page of GOLDPRICE (goldprice.org) which provids the real-time gold price in every 20 seconds (It updates the gold price about every 20 seconds). Then, the it crops all uesless region and leaves the part which displayes the price of gold. To do the image recognition, the program cuts the image and saves each single figure of gold price in png format seperately.
+                                        The program starts from the screenshot. It screenshots the Web page of GOLDPRICE (goldprice.org) which provides the real-time gold price in every 20 seconds (It updates the gold price about every 20 seconds). Then, it crops all useless region and leaves the part which displays the price of gold. To do the image recognition, the program cuts the image and saves each single figure of gold price in png format separately.
                                         <br>
                                         <br>
                                         <img src="img/portfolio/seg.png" class="img-responsive" alt="">
-                                        Then the program compares each image with the my number databased with mean square error algorithm. After recongizing each figure, the program will sum up them to recover the original gold price. The next step is to save all the gold price time by time into a Price Database. 
+                                        Then the program compares each image with my number databased with mean square error algorithm. After recognizing each figure, the program will sum up them to recover the original gold price. The next step is to save all the gold price time by time into a Price Database. 
                                         <br>
                                         <br>
-                                        This video below shows the result of reading the real-time gold price in four time speed. Even though my method in this part is not the best one, it works!
+                                        This video below shows the result of reading the real-time gold price in four-time speed. Even though my method in this part is not the best one, it works!
                                         <br>
                                         <br>
                                         <iframe width="560" height="315" 
@@ -441,7 +441,7 @@
                                     <li>Period:
                                         <strong>Feb 2017 ~ Present</strong>
                                     </li>
-                                    <li>Tools:
+                                    <li>Tool:
                                         <strong>Python</strong>
                                     </li>
                                 </ul>
@@ -619,7 +619,7 @@
                                     <li>Period:
                                         <strong>Mar 2016 ~ May 2016</strong>
                                     </li>
-                                    <li>Tools:
+                                    <li>Tool:
                                         <strong>Matlab</strong>
                                     </li>
                                 </ul>
@@ -666,7 +666,7 @@
                                 <li>Period:
                                     <strong>Oct 2015 ~ Dec 2015</strong>
                                 </li>
-                                <li>Tools:
+                                <li>Tool:
                                     <strong>Matlab</strong>
                                 </li>
                             </ul>
@@ -721,7 +721,7 @@
                                 <li>Period:
                                     <strong>May 2013 ~ Nov 2013</strong>
                                 </li>
-                                <li>Tools:
+                                <li>Tool:
                                     <strong>COSMOL</strong>
                                 </li>
                             </ul>
