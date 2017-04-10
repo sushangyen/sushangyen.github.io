@@ -97,10 +97,10 @@
                 <div class="col-lg-4 col-lg-offset-2">
                     <h3>Background</h3>
                     <p>
-                        I was born in Taiwan and I received my BEng of Electronic Engineering degree in The Chinese University of Hong Kong in 2016. 
+                        I am an AR algorithm Engineer who was born in Taiwan and I received my BEng of Electronic Engineering degree in The Chinese University of Hong Kong in 2016.
                         <br></p>
                     <h3>Interest Fields</h3>
-                     <p>Image processing and video processing
+                     <p>Vitual Reality/Augmented Reality/Image Processing/Video Processing
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -137,7 +137,7 @@
                                 <i class="fa fa-search-plus fa-3x"></i>
                             </div>
                         </div>
-                        <h3>Gold Price (XAUUSD) Analyzer</h3>
+                        <h3>MetaTrader (MT4) Projects</h3>
                         <img src="img/portfolio/XAUUSD.png" class="img-responsive" alt="">
                     </a>
                 </div>
@@ -396,43 +396,40 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <u><h2>Gold Price (XAUUSD) Analyzer</h2></u>
+                            <u><h2>MetaTrader (MT4) Projects</h2></u>
                             <br>
                             <p align="left">
-                                        <Strong>Introduction: </Strong>This XAUUSD analyzer can read the real-time gold price (XAUUSD) from the Internet and do some analysis with an algorithm learned from one of my friends for predicting the best ask/bid moment. Once the program figures out any proper moment to do the XAUUSD transaction, it will notice user by Email. The whole project includes four parts: (1) Real-time gold price reader, (2) Gold price chart generator, (3) Ask/bid moment analyzer, (4) Email Noticer. Here, I gonna introduce my developed process and the problems I met in the following paragraphs. 
+                                        <Strong>Introduction: </Strong>I started to do these projects while I was in the Taiwan military service. One of the Master Sergeant invited me to do some foreign exchange projects for his personal exchange market trader with remuneration (USD650 ~ 850/each project). At first, I had no idea how to get the real-time exchage market informationl. Therefore, I used image recognition with Python to get the real-time exchange price.
                                         <br>
                                         <br>
-                                        <Strong>1) Real-time Gold Price Reader: </Strong> At first, I didn't consider this part with Python as a big deal until figured out that the real-time stock price couldn't get easily without Yahoo Finance API. However, I didn't intend to buy that API as an individual developer who was doing some non-profit research. Maybe the Python library, "Beautiful Soap", is a good solution to get the price data from the HTML. Yet, I was not familiar with that library and the related knowledge of crawling so that I decided to read the price info with my professional skill: image recognition. It sounded like an unwise choice because of the low efficiency of processing those "images". Well...I decided to follow my insane mind before learning more knowledge of Beautiful Soap Library.
-                                        <br>
-                                        <br>
-                                        The program starts from the screenshot. It screenshots the Web page of GOLDPRICE (goldprice.org) which provides the real-time gold price in every 20 seconds (It updates the gold price about every 20 seconds). Then, it crops all useless region and leaves the part which displays the price of gold. To do the image recognition, the program cuts the image and saves each single figure of gold price in png format separately.
-                                        <br>
-                                        <br>
-                                        <img src="img/portfolio/seg.png" class="img-responsive" alt="">
-                                        Then the program compares each image with my number databased with mean square error algorithm. After recognizing each figure, the program will sum up them to recover the original gold price. The next step is to save all the gold price time by time into a Price Database. 
-                                        <br>
-                                        <br>
-                                        This video below shows the result of reading the real-time gold price in four-time speed. Even though my method in this part is not the best one, it works!
+                                        This video below shows the result of reading the real-time gold price in four-time speed.
                                         <br>
                                         <br>
                                         <iframe width="560" height="315" 
                                             src="https://www.youtube.com/embed/KQfOvY1x9N0" frameborder="0" allowfullscreen>
                                         </iframe>
                                         <br>
+                                        <br>
+                                        Few weeks later, I learned that I could use a programmable editor, MQL4, to do these projects. All of the programs can be ran on a popular exchange market program, MT4. In the following paragraphes, I would show what I had done so far.
+                                        <br>
+                                        <br>
+                                        <Strong>Close All of The Trading Items With One Button: </Strong>MetaTrader didn't provide the function for closing up all of the trading items immediately. The function built with several loop provided the good solution for every MT4 user. The video below shows the result of the function.
+                                        <br>
+                                        <br>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oxNO1xoOa7M" frameborder="0" allowfullscreen>
+                                        </iframe>                    
+                                        <br>
+                                        <br>
+                                        <Strong>Close Assigned Type of The Trading Items With One Button:  </Strong>This is the updated version of the previous function. In the function, MT4 users could close the assigned trading type they expected. The following video shows the result of the function.
+                                        <br>
+                                        <br>
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/9aoxlxW7Rxc" frameborder="0" allowfullscreen>
+                                        </iframe>
+                                        <br>
+                                        <br>
                                         (To be continued...)
                                         <br>
                                         <br>
-                                        <!--<Strong>2) Gold Price Chart Generator: </Strong>To be continued...
-                                        <br>
-                                        <br>
-                                        <Strong>3) Ask/bid Moment Analyzer: </Strong>To be continued...
-                                        <br>
-                                        <br>
-                                        <Strong>4) Email Noticer: </Strong>To be continued...
-                                        <br>
-                                       <ul style="list-style-type:none">
-                                          <li> <h3> <a href="XXXXX" target="_blank">    Source Code     </a> </h3> </li>
-                                       </ul> -->
                                     </p>
                                     <ul class="list-inline item-details">
                                     <li>Participant:
@@ -442,7 +439,7 @@
                                         <strong>Feb 2017 ~ Present</strong>
                                     </li>
                                     <li>Tool:
-                                        <strong>Python</strong>
+                                        <strong>Python, MQL4</strong>
                                     </li>
                                 </ul>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
