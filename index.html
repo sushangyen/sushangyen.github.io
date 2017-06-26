@@ -100,7 +100,7 @@
                         I am an AR algorithm Engineer who was born in Taiwan and I received my BEng of Electronic Engineering degree in The Chinese University of Hong Kong in 2016.
                         <br></p>
                     <h3>Interest Fields</h3>
-                     <p>Vitual Reality/Augmented Reality/Image Processing/Video Processing
+                     <p>Computer Vision/Image Processing/Vitual Reality/Augmented Reality/Video Processing
                     </p>
                 </div>
                 <div class="col-lg-4">
@@ -129,7 +129,17 @@
                 </div>
             </div>
             <div class="row">
-
+                <div class="col-sm-4 portfolio-item">
+                    <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <h3>Depth and Stereo Images</h3>
+                        <img src="img/portfolio/depth/depth15.png" class="img-responsive" alt="" height = "450">
+                    </a>
+                </div>
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -338,6 +348,77 @@
     </div>
 
     <!-- Portfolio Modals -->
+
+        <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9 col-lg-offset-2">
+                        <div class="modal-body">
+                            <u><h2>Depth and Stereo Images</h2></u>
+                            <br>
+                            <p align="left">
+                                        <Strong>Abstract: </Strong>In this project, I unwarp the panormaic image with OpenCV and transfer it into the perspective-view image. With the program, the distortion problem in 2-D panorama image could be removed. I only released few of my source code due to the confidentiality agreement from my company. To read the full version report, please check the link in the bottom.
+
+                                        The step of unwarp include: (1) segment; (2) unwarp; (3) anti-aliasing. In the following parts, I will briefly introduce the concepts of them and present the results. 
+                                        <br>
+                                        <br>
+                                        <Strong>Segment: </Strong>In most of the parts in a panoramic image, especially the top 20% and the bottom 20% of image distort extremely, taken by a 360-degree camera. Fortunately, the recorded scene of these the most distorted parts usually include the information of floor and ceiling. Therefore, it can be cropped out directly. To simplify and eliminate the CPU’s usage rate, the sample image has been cropped 40% from the top and 40% from the bottom, which means that only 20% of the image in the middle would be reserved.              
+                                        <br>
+                                        <br>
+                                        Fig. 1. The original panorama image
+                                        <br>
+                                        <img src="img/portfolio/pano/pano.jpg" class="img-responsive" alt="">
+                                        Fig. 2. The cropped panorama image
+                                        <br>
+                                        <img src="img/portfolio/pano/pano6.png" class="img-responsive" alt="">
+                                        Fig. 3. One of the segmented panorama images
+                                        <br>
+                                        <img src="img/portfolio/pano/pano7.bmp" class="img-responsive" alt="">
+                                        <Strong>Unwarp:  </Strong>With the converted formula, we assigned the segmented panorama image to corresponding position pixel by pixel. In the result image, the curved situation of ceiling area has been modified, but there are lots of “holes” (black line) in the image.
+                                        <br>
+                                        <br>
+                                        Fig. 4. The unwarped panorama segment
+                                        <br>
+                                        <img src="img/portfolio/pano/pano11.bmp" class="img-responsive" alt="">
+                                        <Strong>Anti-aliasing:  </Strong>We do the roughly estimation to do image padding for the hole area. Once a hole is detected in the image, we analysis the all eight neighbor pixels one by one . Then, we calculate the mean color value of these eight neighbor pixels.
+                                        <br>
+                                        <br>
+                                        Fig. 5. The final result image                                        
+                                        <br>
+                                        <img src="img/portfolio/pano/pano13.bmp" class="img-responsive" alt="">
+                                        <br>
+                                        <br>
+                                        </p>
+                                        <ul class="list-inline item-details">
+                                         <ul style="list-style-type:none">
+                                        <li> <h3> <a href="https://drive.google.com/file/d/0BxLxHj_PLF-XNF9QZko3eGJvUVE/view?usp=sharing" target="_blank">Depth and Stereo Images Report</a> </h3> 
+                                        <li> <h3> <a href="https://github.com/sushangyen/Unwarped-Panoramic-Image" target="_blank">    Source Code     </a> </h3> </li>
+                                    </ul>
+                                    <ul class="list-inline item-details">
+                                    <li>Participant:
+                                        <strong>Shang-Yen Su</strong>
+                                    </li>
+                                    <li>Period:
+                                        <strong>May 2017 ~ Jun 2017</strong>
+                                    </li>
+                                    <li>Tool:
+                                        <strong>C++ with OpenCV</strong>
+                                    </li>
+                                </ul>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
